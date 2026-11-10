@@ -199,12 +199,12 @@ The following original source copyright and credit notice is preserved:
         <label for="volume" class="sr-only">Volume</label>
         <input id="volume" type="range" min="0" max="1" value="0.5" step="0.05">
       </div>
-      <p id="status" class="status" role="status">PRESS PLAY TO LISTEN</p>
+      <p id="status" class="status" role="status">15 DEMOS</p>
     </div>
     <audio id="audio" controls loop preload="metadata" src="audio/thuleulykken-mix-1.mp3">
       Your browser does not support audio playback.
     </audio>
-    <noscript>Thuleulykken mix 1</noscript>
+    <noscript>Thuleulykken</noscript>
   </footer>
   <script src="tracks.js"></script>
   <script>
@@ -307,12 +307,8 @@ The following original source copyright and credit notice is preserved:
         } else audio.muted = true;
         updateVolume();
       });
-      audio.addEventListener('play', updatePlay);
-      audio.addEventListener('playing', () => { status.textContent = 'PLAYING · REPEAT ON'; updatePlay(); });
-      audio.addEventListener('pause', () => { status.textContent = 'PAUSED'; updatePlay(); });
-      audio.addEventListener('waiting', () => { if (!audio.paused) status.textContent = 'LOADING…'; });
       audio.addEventListener('error', () => {
-        status.textContent = 'AUDIO UNAVAILABLE — PLEASE TRY AGAIN';
+        status.textContent = 'AUDIO UNAVAILABLE . PLEASE TRY AGAIN';
         updatePlay();
       });
       audio.addEventListener('loadedmetadata', updateTime);
