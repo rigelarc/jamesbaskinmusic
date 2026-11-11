@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="James Baskin — website in progress.">
-  <title>James Baskin — Website in Progress</title>
+  <meta name="description" content="Evan Jordan's Website.">
+  <title>James Baskin Music</title>
   <!-- OCR A (version 0.3.1 distribution)
 Source: https://tsukurimashou.org/ocr.php.en
 Download: https://tsukurimashou.org/files/ocr-0.3.1.zip
@@ -267,7 +267,7 @@ The following original source copyright and credit notice is preserved:
           await audio.play();
         } catch (error) {
           if (currentRequest !== request || error.name === 'AbortError') return;
-          errorMessage.textContent = 'AUDIO UNAVAILABLE — PLEASE TRY AGAIN';
+          errorMessage.textContent = 'AUDIO UNAVAILABLE - PLEASE TRY AGAIN';
           errorMessage.hidden = false;
           updatePlay();
         }
@@ -309,7 +309,7 @@ The following original source copyright and credit notice is preserved:
       audio.addEventListener('playing', updatePlay);
       audio.addEventListener('pause', updatePlay);
       audio.addEventListener('error', () => {
-        errorMessage.textContent = 'AUDIO UNAVAILABLE — PLEASE TRY AGAIN';
+        errorMessage.textContent = 'AUDIO UNAVAILABLE - PLEASE TRY AGAIN';
         errorMessage.hidden = false;
         updatePlay();
       });
